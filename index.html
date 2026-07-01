@@ -6,15 +6,69 @@
   <title>Find Your Roommate</title>
 </head>
 <body>
-  <h1 id="title">Find Your Roommate Form</h1>
+  <h1 id="title">Find Your Roommate</h1>
   <p id="description">Fill out the form below to help us find your ideal roommate. Please provide accurate information to ensure the best match.</p>
-  <form id="survey-form">
-    <label for="name">Name</label>
-    <input type="text" id="name" name="name" placeholder="Enter your name" required>
-    <br>
-    <label for="email">Email</label>
-    <input type="email" name="email" placeholder="Enter your Email" required>
-    <br>
+  <form id="roommate-form">
+    <div class="form-group">
+      <label for="name" id="name-label">Name</label>
+      <input type="text" id="name" name="name" placeholder="*" required>  
+    </div>
+
+    <div class="form-group">
+      <label for="surname" id="surname-label">Surname</label>
+      <input type="text" id="surname" name="surname" placeholder="*" required>  
+    </div>
+
+    <div class="form-group">
+      <label for="age">Age</label>
+      <input type="number" id="age" name="age" min="16" max="100" placeholder="*" required> 
+    </div>
+
+    <fieldset>
+      <legend>Gender</legend>
+
+      <label>
+          <input type="radio" name="gender" value="male">
+          Male
+      </label>
+
+      <label>
+          <input type="radio" name="gender" value="female">
+          Female
+      </label>
+
+      <label>
+          <input type="radio" name="gender" value="other">
+          Other
+      </label>
+    </fieldset>
+
+    <div class="form-group">
+      <label for="city" id="city-label">City</label>
+      <input type="text" id="city" name="city" placeholder="*" required>  
+    </div>
+
+    <div class="form-group">
+      <label for="district" id="district-label">Preferred district</label>
+      <input type="text" id="district" name="district" placeholder="Optional">  
+    </div>
+
+    <div class="form-group">
+      <label for="bio" id="bio-label">Share more about yourself and who you want to live with</label>
+      <textarea name="bio" id="bio" placeholder="Optional"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="email" id="email-label">Email</label>
+      <input type="email" id="email" name="email" placeholder="Optional">
+    </div>
+    
+    <div class="form-group">
+      <label for="number" id="number-label">Phone number</label>
+      <input type="tel" id="number" name="number" placeholder="*" required>
+    </div>
+    
+    <button id="submit">Submit form</button>
   </form>
 </body>
 </html>

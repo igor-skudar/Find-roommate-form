@@ -7,77 +7,85 @@
     name="description"
     content="Complete this roommate matching form to help us find someone who fits your lifestyle and housing preferences.">
   <title>Roommate Matching Form | Find a Roommate</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1 id="title">Find a Roommate</h1>
-    <p id="description">Fill out the form below to help us find your ideal roommate. Please provide accurate information to ensure the best match.</p>
-  </header>
-  
-  <main>
-    <form id="roommate-form" method="post">
-      <div class="form-group">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" autocomplete="given-name" required>  
-      </div>
+  <div class="container">
+    <header>
+      <h1 id="title">Find a Roommate</h1>
+      <p id="description">Fill out the form below to help us find your ideal roommate. Please provide accurate information to ensure the best match.</p>
+    </header>
+    
+    <main>
+      <form id="roommate-form" method="post">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" autocomplete="given-name" required>  
+        </div>
 
-      <div class="form-group">
-        <label for="surname">Surname</label>
-        <input type="text" id="surname" name="surname" autocomplete="family-name" required>  
-      </div>
+        <div class="form-group">
+          <label for="surname">Surname</label>
+          <input type="text" id="surname" name="surname" autocomplete="family-name" required>  
+        </div>
 
-      <div class="form-group">
-        <label for="age">Age</label>
-        <input type="number" id="age" name="age" min="16" max="100" step="1" required> 
-      </div>
+        <div class="form-group">
+          <label for="age">Age</label>
+          <input type="number" id="age" name="age" min="16" max="100" step="1" required> 
+        </div>
 
-      <fieldset>
-        <legend>Gender</legend>
+        <fieldset class="form-group">
+          <legend>Gender</legend>
 
-        <label>
-            <input type="radio" name="gender" value="male" required>
-            Male
-        </label>
+          <div class="radio-group">
+            <label>
+              <input type="radio" name="gender" value="male" required>
+              Male
+            </label>
 
-        <label>
-            <input type="radio" name="gender" value="female">
-            Female
-        </label>
+            <label>
+                <input type="radio" name="gender" value="female">
+                Female
+            </label>
 
-        <label>
-            <input type="radio" name="gender" value="other">
-            Other
-        </label>
-      </fieldset>
+            <label>
+                <input type="radio" name="gender" value="other">
+                Other
+            </label>
+          </div>
+        </fieldset>
 
-      <div class="form-group">
-        <label for="city">City</label>
-        <input type="text" id="city" name="city" required>  
-      </div>
+        <div class="form-group">
+          <label for="city">City</label>
+          <input type="text" id="city" name="city" required>  
+        </div>
 
-      <div class="form-group">
-        <label for="district">Preferred district</label>
-        <input type="text" id="district" name="district" placeholder="Optional">  
-      </div>
+        <div class="form-group">
+          <label for="district">Preferred district</label>
+          <input type="text" id="district" name="district" placeholder="Optional">  
+        </div>
 
-      <div class="form-group">
-        <label for="bio">About you</label>
-        <textarea name="bio" id="bio" rows="5"></textarea>
-      </div>
+        <div class="form-group full-width">
+          <label for="bio">About you</label>
+          <textarea name="bio" id="bio"></textarea>
+        </div>
 
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" autocomplete="email" placeholder="Optional">
-      </div>
-      
-      <div class="form-group">
-        <label for="number">Phone number</label>
-        <input type="tel" id="number" name="number" autocomplete="tel" inputmode="tel" required>
-      </div>
-      
-      <button id="submit" type="submit">Submit</button>
-    </form>
-  </main>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" autocomplete="email" placeholder="Optional">
+        </div>
+        
+        <div class="form-group">
+          <label for="number">Phone number</label>
+          <input type="tel" id="number" name="number" autocomplete="tel" inputmode="tel" required>
+        </div>
+        
+        <button class="full-width" id="submit" type="submit">Submit</button>
+      </form>
+    </main>
+  </div>
   
 </body>
 </html>
